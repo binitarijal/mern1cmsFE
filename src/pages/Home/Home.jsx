@@ -11,9 +11,22 @@ const Home = () => {
 
     const[blogs,setBlogs]=useState([])
 const fetchBlogs=async ()=>{
+    try{
     const response= await axios.get('http://localhost:3000/blogs')
-    console.log(response.data.blogs);
-    setBlogs(response.data.blogs)
+    if(!response.data.success){
+        console.log("Failed to fetch blogs");
+        return;
+    }
+    else{
+         setBlogs(response.data.blogs)
+        console.log("Blogs fetched successfully");
+    }
+    //console.log(response.data.blogs);
+   
+    }
+    catch(error){
+ console.log("Error fetching blogs:",error);
+    }
 }
 useEffect(()=>{
     fetchBlogs()

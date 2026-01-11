@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif; /* Modern clean font */
+  
+}
+
+body {
+  background-color: #f4f7f6;
+  background-color: grey;
+}

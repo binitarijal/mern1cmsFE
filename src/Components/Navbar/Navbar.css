@@ -3,56 +3,69 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5%;
-  background: rgba(52, 50, 50, 0.8);
-  backdrop-filter: blur(10px); /* Glass effect */
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.8rem 5%;
+  background: rgba(52, 50, 50, 0.85);
+  backdrop-filter: blur(12px); /* Glass effect */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-radius: 0 0 15px 15px;
 }
 
 /* Logo */
-.nav-logo理论 a {
-  font-size: 1.5rem;
+.nav-logo .logo-link {
+  font-size: 1.7rem;
   font-weight: 700;
-  color: #333;
-  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s ease;
 }
 
-
+.nav-logo .logo-link:hover {
+  color: #f0f0f0;
+  transform: scale(1.05);
+}
 
 /* Navigation Links */
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 1.8rem;
+  align-items: center;
 }
 
-.nav-links a {
+.nav-links li {
+}
+
+.nav-link {
   text-decoration: none;
   color: #ffffff;
   font-weight: 500;
-  transition: color 0.3s ease;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
-.nav-links a:hover, 
-.nav-links a.active {
-  color: #ffffff;
+.nav-link:hover {
+  color: #ffdd57; /* Highlight color on hover */
+  transform: scale(1.05);
 }
 
 /* CTA Button */
 .btn-primary {
   background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  padding: 0.6rem 1.4rem;
-  border-radius: 8px;
+  color: #333;
+  padding: 0.6rem 1.5rem;
+  border-radius: 12px;
   text-decoration: none;
   font-weight: 600;
-  transition: transform 0.2s ease, background 0.3s ease;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: #f7f7f7;
-  transform: translateY(-2px);
+  background-color: #f0f0f0;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }

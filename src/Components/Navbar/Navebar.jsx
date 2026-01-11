@@ -1,26 +1,34 @@
-import React from 'react'
-import './Navbar.css'
+import React from "react";
+import "./Navbar.css";
+import { useNavigate } from "react-router-dom";
+
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
-    <>
-    
     <nav className="navbar">
-  <div className="nav-logo">
-    <a href="/">CMS</a>
-  </div>
-  
-  <ul className="nav-links">
-    <li><a href="/" className="active">Home</a></li>
-    <li><a href="#" >Pricing</a></li>
-    <li><a href="#">About</a></li>
-  </ul>
+      <div className="nav-logo">
+        <span onClick={() => navigate("/")} className="logo-link">
+          CMS
+        </span>
+      </div>
 
-  <div className="nav-cta">
-    <a href="#" className="btn-primary">Get Started</a>
-  </div>
-</nav>
-    </>
-  )
-}
+      <ul className="nav-links">
+        <li>
+          <span onClick={() => navigate("/")} className="nav-link">
+            Home
+          </span>
+        </li>
+        <li>
+          <span
+            onClick={() => navigate("/createBlog")}
+            className="btn-primary"
+          >
+            + Add Blog
+          </span>
+        </li>
+      </ul>
+    </nav>
+  );
+};
 
-export default Navbar
+export default Navbar;
